@@ -1,0 +1,492 @@
+
+/*Reset CSS*/
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Avenir, sans-serif;
+    background-color: black;
+}
+header{
+    background: url('https://cdn.pixabay.com/photo/2019/07/18/05/50/hair-4345575_960_720.jpg');
+    background-color: black ;
+    background-position: center;
+    color: #FAEBD7;
+    text-align: center;
+    height: 300px;
+    background-size: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+header nav{
+    display:flex;
+    flex-wrap :wrap;
+    justify-content:space-between;
+    padding:20px;
+    color:white;
+    position: relative;
+}
+
+
+header nav a{
+    color:#FAEBD7;
+    text-decoration:none;
+    margin-right:50px;
+    
+}
+.nomEnt{
+    float: left;
+}
+.presentation{
+    
+    position: absolute;
+    background-size: cover;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FAEBD7;
+}
+nav a:hover{
+    color: gold;
+    border-bottom: 2px solid black;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    margin-top: 0px;   
+    font-size: 20px; 
+}
+
+nav ul li ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav > ul > .onglets > li{
+    float: right;
+    position: relative;
+}
+nav li:hover .sous{
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    padding: 0px;
+    font-size: 15px;
+}
+.sous:hover a{
+    text-shadow: 1px 1px 2px black;
+}
+
+.onglets a{
+    z-index: 100;
+}
+.sous a{
+    z-index: 0;
+}
+nav > ul li:hover .sous{
+    display: flex;
+    flex-flow: column wrap;
+    text-align: left;
+    position: absolute;
+}
+.sous{
+    display: none;
+    width: 20%;
+}
+.sous li{
+    flex: 1 1 auto;
+    text-align: left;
+    padding: 10px;
+}
+/* Menu burger */
+
+header .icon{
+    display: none;
+}
+@media (max-width: 749px){
+    .body{
+        padding: 0;
+        margin: 0;
+        background-color: blanchedalmond;
+    }
+    nav ul .onglets li a{
+        display: none; 
+    }
+    header .icon{
+        display: block;
+        position: absolute;
+        right: 50%;
+        left: 50%;
+        width: 10%;
+        background-color: blanchedalmond;
+        color: black;
+        box-shadow: 1px 1px 1px black;
+    }
+    nav.responsive .icon{
+        display: block;
+        position: absolute;
+        right: 50%;
+        left: 50%;
+        width: 10%;
+        background-color: blanchedalmond;
+        color: black;
+        box-shadow: 1px 1px 1px black;
+    }
+    nav.responsive ul .onglets li a{
+        display: block;
+        padding: 150% 5;
+      
+        background-color: blanchedalmond;
+        color: black;
+    }
+    nav.responsive .onglets{
+        left: 20%;
+        right: 20%;
+    }
+    nav.responsive > ul > .onglets > li{
+        position: relative;
+        width: 100%;
+    }
+    nav.responsive > ul li:hover .sous{
+        align-items: center;
+        position: relative;
+        background-color: blanchedalmond;
+        color: black;
+        width: 100%;
+        left: 20%;
+        right: 20%;
+        text-align: left;
+    }
+    .sous li{
+   
+        margin: 0;
+        position: relative;
+    }
+    .presentation h1{
+        display: none;
+    }
+    .salon{
+        width: 100%;
+    }
+    .sous:hover a{
+        text-shadow: none;
+    }
+    .titreT{
+        width: 120%;
+    }
+    .temoignages:not(.titre){
+        display: flex;
+        flex-flow: row wrap; 
+        width: 120%;
+    }
+    .carte{width: 100%;}
+    header{
+        width: 100%;
+    }
+    .salon .titre{
+        font-size: 15px;
+        width: 100%;
+    }
+    .photo{
+        width: 80%;
+    }
+    .section-map{
+        width: 100%;
+    }   
+}@media(max-width:400px)
+{
+    .salon .titre{
+        font-size: 15px;
+        width: 100%;
+    }
+    .photo{
+        width: 100%;
+    }
+    .titreT{
+        width: 100%;
+    }
+    header{
+        height: 33%;
+        width: 100%;
+    }
+    .temoignages{
+        display: flex;
+        flex-direction: column; 
+    }
+    .texte-map{
+        font-size: 15px;
+    }
+}
+/* Salon */
+.salon{
+    background-color: blanchedalmond;
+    width: 100%;
+}
+.salon .photo{
+   justify-content: center;
+   display: flex;
+   padding-left: 5%;
+   padding-top: 5%;
+   padding-bottom: 10%;
+   padding-right: 5%;
+    position:   relative;
+    background-color: blanchedalmond;
+}
+.salon .titre{
+    padding: 5px;
+    background-color: #292926;
+    color: blanchedalmond;
+    font-size: 30px;
+}
+.photo1{
+    justify-content: left;
+    display: flex;
+
+}
+.photo2{
+    justify-content: center;
+    display: flex;   
+}
+.photo3{
+    justify-content: right;
+    display: flex;   
+}
+.photo1 img{
+    width: 100%;
+}
+.photo2 img{
+    width :100%;
+    padding: auto;
+}
+.photo3 img{
+    width :100%;
+    margin-left: 20px;
+}
+
+/* Carte */
+.temoignages{
+    background-color: blanchedalmond;
+    height: 120%; 
+    width: 100%; 
+    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.titreT{
+    padding: 5px;
+    background-color: #292926;
+    color: blanchedalmond;
+    font-size: 30px;
+    text-align: center;
+    font-size: 40px;
+    border: 5px solid;
+    width: 100%;
+}
+.temoignages:not(.titre){
+    display: flex;
+    flex-direction: row wrap; 
+}
+.titre{
+    text-align: center;
+    font-size: 40px;
+    border: 5px solid;
+    width: auto;
+    background-color: #292926;
+    color: blanchedalmond;
+}
+.carte{   
+    text-align: center;
+}
+hr {
+    border: none;
+    border-top: 3px double #333;
+    color: #333;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+.nom{
+    text-align: center;
+}
+hr:after {
+    background: #FAEBD7;
+    padding: 0 4px;
+    position: absolute;
+    top: -13px  ;
+}
+@media (max-width: 1111px){
+    .info{
+        font-size: 15px;
+    }
+}
+/* Bordure animé */
+.carte
+{
+  width: 45%;
+  margin: 0 auto;
+  padding: 2px;
+  background-color: black; /* gold */
+  /* Single pixel data uri image http://jsfiddle.net/LPxrT/ 
+  /* background-image: gold, gold, white */
+  background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP68Df///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw== '),  url('data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),
+url('data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
+  background-repeat: no-repeat;
+  background-size: 0 2px, 0 100%, 0% 2px;
+  background-position: top center, top center, bottom center;
+  -webkit-animation: drawBorderFromCenter 4s;
+}
+.carte2
+{
+  width: 70%;
+  margin: 0 auto;
+  padding: 2px;
+  background-color: black; /* gold */
+  /* Single pixel data uri image http://jsfiddle.net/LPxrT/ 
+  /* background-image: gold, gold, white */
+  background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),  url('data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),
+url('data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
+  background-repeat: no-repeat;
+  background-size: 0 2px, 0 100%, 0% 2px;
+  background-position: top center, top center, bottom center;
+  -webkit-animation: drawBorderFromCenter 4s;
+}
+.carte3
+{
+  width: 45%;
+  margin: 0 auto;
+  padding: 2px;
+  background-color: black; /* gold */
+  /* Single pixel data uri image http://jsfiddle.net/LPxrT/ 
+  /* background-image: gold, gold, white */
+  background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),  url('data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),
+url('data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
+  background-repeat: no-repeat;
+  background-size: 0 2px, 0 100%, 0% 2px;
+  background-position: top center, top center, bottom center;
+  -webkit-animation: drawBorderFromCenter 4s;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes drawBorderFromCenter {
+    0% {
+      background-size: 0 2px, 0 0, 100% 100%;
+    }
+    20% {
+      background-size: 100% 2px, 100% 0, 100% 100%;
+    }
+    66%
+    {
+      background-size: 100% 2px, 100% 98%, 100% 100%;
+    }
+    99%
+    {
+      background-size: 100% 2px, 100% 98%, 0 2px;
+    }
+}
+
+
+
+.info
+{
+    font-size: 25px;
+  background: white;
+  padding: 2em;
+  text-align: center;
+}
+.nom{
+    color: blanchedalmond;
+}
+@media (max-width: 1011px){
+    .info{
+        font-size: 15px;
+    }
+}
+/* Map responsive */
+.section-map{
+    padding: 5px;
+    background-color: blanchedalmond;
+    width: 100%;
+}
+@media(max-width : 600px)
+{
+    .section-map{
+        width: 120%;
+    }
+}
+.texte-map{
+    padding: 5px;
+    background-color: #292926;
+    color: blanchedalmond;
+    text-align: center;
+    font-size: 40px;
+}
+.map {
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+    
+.map iframe {
+left:5%;
+right: 5%;
+top:10%;
+height:60%;
+width:90%;
+position:absolute;
+padding: 10px;
+}
+
+/* Footer */
+
+footer{
+    border-top: 2px dotted red;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    padding: 15px;
+}
+.horaire{
+    border-top: 2px dotted white;
+    background-color: white;
+    color: #000000;
+    text-align: center;
+    width: 33%;
+}
+.titre{
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.nous-contacter{
+    border-top: 2px dotted white;
+    background-color: white;
+    color: #000000;
+    text-align: center;
+    padding: 15px;
+    width: 33%;
+}
+.mail{
+    margin-bottom: 5px;
+}
+.telephone{
+    margin-bottom: 5px;
+}
+.adresse{
+    margin-bottom: 5px;
+}
+.reseau{
+    padding: 15px;
+    width: 33%;
+    text-align: center;
+}
+@media(max-width: 750px)
+{
+    footer{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+}

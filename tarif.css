@@ -1,0 +1,310 @@
+/*Reset CSS*/
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Avenir, sans-serif;
+    background-color: black;
+}
+
+header{
+    background: url('https://cdn.pixabay.com/photo/2019/07/18/05/50/hair-4345575_960_720.jpg');
+    /*background-color: #FAEBD7 ;*/
+    background-position: center;
+    color: #FAEBD7;
+    text-align: center;
+    height: 300px;
+    width: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+header nav{
+    display:flex;
+    flex-wrap :wrap;
+    justify-content:space-between;
+    padding:20px;
+    color:white;
+    position: relative;
+}
+
+.nomEnt{
+    float: left;
+}
+header nav a{
+    color:#FAEBD7;
+    text-decoration:none;
+    margin-right:50px;
+    
+}
+.presentation{
+    
+    position: absolute;
+    background-size: cover;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FAEBD7;
+}
+nav a:hover{
+    color: gold;
+    border-bottom: 2px solid black;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    margin-top: 0px;   
+    font-size: 20px; 
+}
+
+nav ul li ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav > ul > .onglets > li{
+    float: right;
+    position: relative;
+}
+nav li:hover .sous{
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    padding: 0px;
+    font-size: 15px;
+}
+.sous:hover a{
+    text-shadow: 1px 1px 2px black;
+}
+
+.onglets a{
+    z-index: 100;
+}
+.sous a{
+    z-index: 0;
+}
+nav > ul li:hover .sous{
+    display: flex;
+    flex-flow: column wrap;
+    text-align: left;
+    position: absolute;
+}
+.sous{
+    display: none;
+    width: 20%;
+}
+.sous li{
+    flex: 1 1 auto;
+    text-align: left;
+    padding: 10px;
+}
+/* Menu burger */
+
+header .icon{
+    display: none;
+}
+@media (max-width: 711px){
+    .body{
+        padding: 0;
+        margin: 0;
+    }
+    nav ul .onglets li a{
+        display: none; 
+    }
+    header .icon{
+        display: block;
+        position: absolute;
+        right: 50%;
+        left: 50%;
+        width: 10%;
+        background-color: blanchedalmond;
+        color: black;
+        box-shadow: 1px 1px 1px black;
+    }
+    nav.responsive .icon{
+        display: block;
+        position: absolute;
+        right: 50%;
+        left: 50%;
+        width: 10%;
+        background-color: blanchedalmond;
+        color: black;
+        box-shadow: 1px 1px 1px black;
+    }
+    nav.responsive ul .onglets li a{
+        display: block;
+        padding: 150% 5;
+      
+        background-color: blanchedalmond;
+        color: black;
+    }
+    nav.responsive .onglets{
+        left: 20%;
+        right: 20%;
+    }
+    nav.responsive > ul > .onglets > li{
+        position: relative;
+        width: 100%;
+    }
+    nav.responsive > ul li:hover .sous{
+        align-items: center;
+        position: relative;
+        background-color: blanchedalmond;
+        color: black;
+        width: 100%;
+        left: 20%;
+        right: 20%;
+        text-align: center;
+    }
+    .sous li{
+   
+        margin: 0;
+        position: relative;
+    }
+    .presentation h1{
+        display: none;
+    }
+    
+    .sous:hover a{
+        text-shadow: none;
+    }
+    header{
+        width: 100%;
+    }
+    .gauche{
+        width: 120%;
+    }
+    .main{
+        width: 120%;
+    }   
+    .prixML{
+        margin-right: 20px;
+        margin-left: 20px;
+        display: flex;
+        flex-flow: column wrap;
+    }
+}
+@media(max-width:400px)
+{
+    header{
+        height: 33%;
+        width: 100%;
+    }
+    
+}
+/* MAIN */
+.main{
+    color: white;
+    background-color: blanchedalmond;
+    margin-top: 40px;
+    margin-left: 25%;
+    margin-right: 15%;
+    outline-color: black;
+    display: flex;
+    height: 100%;
+    width: 45%;
+    border: 5px double #000000; 
+    padding: 15px;
+}
+.gauche .nom, .descr{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+}
+.gauche .prix{
+    display: flex;
+    flex-flow: row wrap;
+    color: #000000;
+    float: right;
+    border-bottom: 2px dotted #000000;
+}
+.prixC{
+    display: flex;
+    flex-flow: column wrap;
+}
+.prixML{
+    margin-right: 40px;
+    margin-left: 40px;
+    display: flex;
+    flex-flow: column wrap;
+}
+.prixL{
+    display: flex;
+    flex-flow: column wrap;
+}
+.categ{
+    font-size: 30px;
+    font-style: italic;
+    color: black;
+    padding: 20px;
+
+}
+.gauche .nom{
+    color: red;
+    font-size: 20px;
+}
+.gauche .descr{
+    color: black;
+    width: 65%;
+    font-size: 10px;
+}
+.precision{
+    color: white;
+    margin-bottom: 20%;
+    margin-left: 59%;
+    margin-right: 15%;
+    display: flex;
+}
+
+/* Footer */
+footer{
+    border-top: 2px dotted red;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    padding: 15px;
+}
+.horaire{
+    border-top: 2px dotted white;
+    background-color: white;
+    color: #000000;
+    text-align: center;
+    width: 33%;
+}
+.titre{
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.nous-contacter{
+    border-top: 2px dotted white;
+    background-color: white;
+    color: #000000;
+    text-align: center;
+    padding: 15px;
+    width: 33%;
+}
+.mail{
+    margin-bottom: 5px;
+}
+.telephone{
+    margin-bottom: 5px;
+}
+.adresse{
+    margin-bottom: 5px;
+}
+.reseau{
+    padding: 15px;
+    width: 33%;
+    text-align: center;
+}
+@media(max-width: 750px)
+{
+    footer{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+}

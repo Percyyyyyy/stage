@@ -1,0 +1,193 @@
+/*Reset CSS*/
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Avenir, sans-serif;
+    background-color: black;
+}
+
+header{
+    background: url('https://cdn.pixabay.com/photo/2019/07/18/05/50/hair-4345575_960_720.jpg');
+    /*background-color: #FAEBD7 ;*/
+    background-position: center;
+    color: #FAEBD7;
+    text-align: center;
+    height: 300px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+header nav{
+    display:flex;
+    flex-wrap :wrap;
+    justify-content:space-between;
+    padding:20px;
+    color:white;
+    position: relative;
+}
+
+.nomEnt{
+    float: left;
+}
+header nav a{
+    color:#FAEBD7;
+    text-decoration:none;
+    margin-right:50px;
+    
+}
+.presentation{
+    
+    position: absolute;
+    background-size: cover;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FAEBD7;
+}
+nav a:hover{
+    color: gold;
+    border-bottom: 2px solid black;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    margin-top: 0px;   
+    font-size: 20px; 
+}
+
+nav ul li ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav > ul > .onglets > li{
+    float: right;
+    position: relative;
+}
+nav li:hover .sous{
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    padding: 0px;
+    font-size: 15px;
+}
+.sous:hover a{
+    text-shadow: 1px 1px 2px black;
+}
+
+.onglets a{
+    z-index: 100;
+}
+.sous a{
+    z-index: 0;
+}
+nav > ul li:hover .sous{
+    display: flex;
+    flex-flow: column wrap;
+    text-align: left;
+    position: absolute;
+}
+.sous{
+    display: none;
+    width: 20%;
+}
+.sous li{
+    flex: 1 1 auto;
+    text-align: left;
+    padding: 10px;
+}
+/* Menu burger */
+
+header .icon{
+    display: none;
+}
+@media (max-width: 711px){
+    .body{
+        padding: 0;
+        margin: 0;
+    }
+    nav ul .onglets li a{
+        display: none; 
+    }
+    header .icon{
+        display: block;
+        position: absolute;
+        right: 50%;
+        left: 50%;
+        width: 10%;
+        background-color: blanchedalmond;
+        color: black;
+        box-shadow: 1px 1px 1px black;
+    }
+    nav.responsive .icon{
+        display: block;
+        position: absolute;
+        right: 50%;
+        left: 50%;
+        width: 10%;
+        background-color: blanchedalmond;
+        color: black;
+        box-shadow: 1px 1px 1px black;
+    }
+    nav.responsive ul .onglets li a{
+        display: block;
+        padding: 150% 5;
+      
+        background-color: blanchedalmond;
+        color: black;
+    }
+    nav.responsive .onglets{
+        left: 20%;
+        right: 20%;
+    }
+    nav.responsive > ul > .onglets > li{
+        position: relative;
+        width: 100%;
+    }
+    nav.responsive > ul li:hover .sous{
+        align-items: center;
+        position: relative;
+        background-color: blanchedalmond;
+        color: black;
+        width: 100%;
+        left: 20%;
+        right: 20%;
+        text-align: center;
+    }
+    .sous li{
+   
+        margin: 0;
+        position: relative;
+    }
+    .presentation h1{
+        display: none;
+    }
+    
+    .sous:hover a{
+        text-shadow: none;
+    }
+}
+.real{
+    background-color: blanchedalmond;
+    margin-top: 40px;
+    margin-bottom: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+    outline-color: black;
+}
+.real .photo{
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    border : 2px solid #000000;
+    padding: 40px;
+    margin-bottom: 10px;
+}
+.real .photo img{
+    width: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
